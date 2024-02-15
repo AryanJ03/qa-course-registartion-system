@@ -1,0 +1,4 @@
+Packages to download in your local virtual environment:
+
+Flask 'pip install flask' to get for windows
+flask-SQLALCHEMY (Not implemented yet but will need to be installed as well)
