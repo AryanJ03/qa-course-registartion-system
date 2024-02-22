@@ -25,4 +25,10 @@ def test():
 def register():
     username = request.form["username"]
     passord = request.form["password"]
+        if form.validate_on_submit():
+        user = User(username=form.username.data, email=form.email.data, password=form.password.data, type=form.user_type.data)
+        db.session.add(user)
+        db.session.commit()
+        flash(f'Account created for {form.username.data}! You are now able to log in', 'success')
+        return redirect(url_for('login'))
     return render_template("register.html", username=username)
