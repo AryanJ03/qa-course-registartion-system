@@ -15,4 +15,4 @@ def test():
 def register():
     username = request.form["username"]
     passord = request.form["password"]
-    return render_template("success.html", username=username)
+    return render_template("register.html", username=username)
