@@ -9,3 +9,10 @@ def index():
 @main.route('/test')
 def test():
     return render_template('test.html')
+
+
+@main.route("/register", methods=["POST"])
+def register():
+    username = request.form["username"]
+    passord = request.form["password"]
+    return render_template("success.html", username=username)
